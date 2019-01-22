@@ -7,11 +7,18 @@
     <meta name="description" content="An evening event in Brighton where three experts share their wisdom of art, technology, and local knowledge."/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300|Open+Sans:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300|Open+Sans:400,400i,700" rel="stylesheet">
     <style>
       body {
         font-family: 'Open Sans', sans-serif;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      body > p {
+        max-width: 600px;
+        text-align: justify;
       }
       a {
         color: inherit;
@@ -34,6 +41,9 @@
         margin-bottom: 2em;
         font-style: italic;
       }
+      #next {
+        text-align: center;
+      }
       #themes {
         list-style: none;
         padding: 0;
@@ -41,6 +51,9 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
+      }
+      #themes h2 {
+        text-align: center;
       }
       @media only screen and (min-width: 600px) {
         #themes {
@@ -58,7 +71,19 @@
         background: url('images/tshirt.png') no-repeat center top;
         background-size: 200px;
       }
-      @media only screen and (max-width: 600px) {
+      .button {
+        display: inline-block;
+        padding: 0.57em 1.5em;
+        background: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 3px;
+        font-size: 0.9em;
+      }
+      .button.meetup {
+        background: #F64060;
+      }
+      @media only screen and (max-width: 700px) {
         h1 {
           font-size: 48px;
         }
@@ -75,6 +100,7 @@
           width: 100px;
           height: 140px;
           background-size: 90px;
+          font-weight: bold;
         }
       }
     </style>
@@ -87,6 +113,7 @@
     <div id="next">
       <p>6.30pm, February 6th 2019</p>
       <p><a href="https://www.platf9rm.com/brighton-event-space" style="text-decoration: none;"><img src="images/platf9rm.gif" style="height:1em;"/> Brighton</a></p>
+      <a class="meetup button" href="https://www.meetup.com/t-shaped-talks/events/258290365/">Join us on Meetup</a>
     </div>
     <ul id="themes">
       <li><h2>Art</h2></li>
@@ -94,7 +121,13 @@
       <li><h2>Local</h2></li>
     </ul>
     <p>
-      Interested in speaking or coming along? <a href="mailto:hello@tshapedtalks.com">Email us</a>.
+      T-Shaped Talks are inspired by the diverse communities of Brighton &amp; Hove. They are an opportunity to learn from each other and find out what's going on in our city.
+    </p>
+    <p>
+      Are you an aspiring <a href="https://en.wikipedia.org/wiki/T-shaped_skills">T-shaped individual</a>? <a href="https://medium.com/@jchyip/why-t-shaped-people-e8706198e437">This post</a> explains some of the reasons why you may want to be T-shaped.</p>
+    </p>
+    <p>
+      Interested in speaking or getting involved? <a href="mailto:hello@tshapedtalks.com">Email us</a>.
     </p>
   </body>
 </html>
