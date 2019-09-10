@@ -111,6 +111,14 @@
         opacity: 0.67;
         text-align: center;
       }
+      .rating {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: flex-start;
+        font-weight: bold;
+        color: #333;
+        margin: 4px;
+      }
       @media only screen and (max-width: 700px) {
         h1 {
           font-size: 48px;
@@ -155,8 +163,17 @@
     </p>
     <div id="past">
       <h2>Past events</h2>
-      <p><a href="https://www.meetup.com/t-shaped-talks/events/259532514/">April 2019 @ Platf9rm, Brighton</a></p>
-      <p><a href="https://www.meetup.com/t-shaped-talks/events/258290365/">February 2019 @ Platf9rm, Brighton</a></p>
+      <p>
+        <a href="https://www.meetup.com/t-shaped-talks/events/259532514/">April 2019 @ Platf9rm, Brighton</a>
+        <br />
+        <span class="rating">4.8&nbsp;<img src="images/star.svg" alt="Star" /></span>
+      </p>
+
+      <p>
+        <a href="https://www.meetup.com/t-shaped-talks/events/258290365/">February 2019 @ Platf9rm, Brighton</a>
+        <br />
+        <span class="rating">4.9&nbsp;<img src="images/star.svg" alt="Star" /></span>
+      </p>
     </div>
     <div id="credits">
       Put together with &#x2764; by <a href="https://chetbox.com">Chetan</a> and <a href="https://www.linkedin.com/in/lukethompsonhays">Luke</a>
