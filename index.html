@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132876190-1"></script>
     <script>
@@ -11,7 +12,7 @@
       gtag('config', 'UA-132876190-1');
     </script>
 
-    <title>T-Shaped Talks</title>
+    <title>T-Shaped Talks - Brighton &amp; Hove</title>
     <link rel="icon" type="image/x-icon" href="images/tshirt.png" />
 
     <meta name="description" content="An evening event in Brighton where three experts share their wisdom of the arts, technology, and local knowledge."/>
@@ -26,11 +27,10 @@
         align-items: center;
         justify-content: center;
       }
-      body > p {
+      body > div {
         max-width: 600px;
         text-align: justify;
-        margin-left: 1em;
-        margin-right: 1em;
+        margin: 1em;
       }
       a {
         color: inherit;
@@ -38,20 +38,29 @@
       h1, h2, h3, h4 {
         font-family: 'Lato', sans-serif;
         font-weight: 300;
+        text-align: center;
       }
       h1 {
         font-size: 96px;
         font-weight: 100;
+        margin-bottom: 0;
       }
       h2 {
-        font-size: 24px;
+        font-size: 32px;
       }
       img {
         border: none;
       }
+      #location {
+        font-family: 'Lato', sans-serif;
+        margin-top: 12px;
+        opacity: 0.5;
+        font-weight: 300;
+      }
       #about {
         margin-bottom: 2em;
         font-style: italic;
+        text-align: center;
       }
       #next, #past {
         text-align: center;
@@ -74,13 +83,13 @@
         align-items: center;
         justify-content: center;
       }
-      #themes h2 {
+      #themes li > * {
         text-align: center;
       }
       @media only screen and (min-width: 600px) {
         #themes {
-          margin-top: 64px;
-          margin-bottom: 64px;
+          margin-top: 32px;
+          margin-bottom: 32px;
         }
       }
       #themes > * {
@@ -125,6 +134,9 @@
           font-size: 48px;
         }
         h2 {
+          font-size: 24px;
+        }
+        h3 {
           font-size: 18px;
         }
         #themes {
@@ -141,27 +153,37 @@
   </head>
   <body>
     <h1>T-Shaped Talks</h1>
+    <h2 id="location">Brighton &amp; Hove</h2>
     <p id="about">
-      Three experts share their wisdom of the arts, technology, and local knowledge.
+      An evening where local experts share their wisdom of the arts, technology, and local intiatives.
     </p>
+    <ul id="themes">
+      <li><h3>Arts</h3></li>
+      <li><h3>Technology</h3></li>
+      <li><h3>Local</h3></li>
+    </ul>
     <div id="next">
       <p>Keep in touch and find out about the next event</p>
       <a class="meetup button" href="https://www.meetup.com/t-shaped-talks/">Join us on Meetup</a>
     </div>
-    <ul id="themes">
-      <li><h2>Arts</h2></li>
-      <li><h2>Technology</h2></li>
-      <li><h2>Local</h2></li>
-    </ul>
-    <p>
-      T-Shaped Talks are inspired by the diverse communities of Brighton &amp; Hove. They are an opportunity to learn from each other and find out what's going on in our city. Expect in-depth talks accessible to everyone.
-    </p>
-    <p>
-      Are you an aspiring <a href="https://en.wikipedia.org/wiki/T-shaped_skills">T-shaped individual</a>? <a href="https://medium.com/@jchyip/why-t-shaped-people-e8706198e437">This post</a> explains some of the reasons why you may want to be T-shaped.</p>
-    </p>
-    <p>
-      Interested in speaking or getting involved? <a href="mailto:hello@tshapedtalks.com">Email us</a>.
-    </p>
+    <div id="what-to-expect">
+      <h2>What to expect</h2>
+      <p><b>Three in-depth talks</b> - Learn and be inspired in talks about local communities that are accessible to everyone.</p>
+      <p><b>Conversations over questions</b> - There's plenty of time for you to talk to the speakers and other attendees. Talks are not recorded.</p>
+      <p><b>A broad audience</b> - Meet and be inspired by others you might not usually meet.</p>
+      <p>T-Shaped Talks are inspired by the diverse communities of Brighton &amp; Hove. They are an opportunity to learn from each other and find out what's going on in our city.</p>
+    </div>
+    <div id="what-is-t-shaped">
+      <h2>Why "T-Shaped"?</h2>
+      <p>
+        Learn what is to be a <a href="https://en.wikipedia.org/wiki/T-shaped_skills">T-shaped individual</a>? <a href="https://medium.com/@jchyip/why-t-shaped-people-e8706198e437">This post</a> explains some of the reasons why you may want to be T-shaped.</p>
+      </p>
+    </div>
+    <div id="contact">
+      <h2>Get in touch</h2>
+      <p>Made a connection at T-Shaped Talks? Inspired to get involved in something new? Let us know at <a href="mailto:hello@tshapedtalks.com">hello@tshapedtalks.com</a> or Tweet <a href="https://twitter.com/TShapedTalks">@TShapedTalks</a></p>
+      <p>Interested in speaking or getting involved? <a href="mailto:hello@tshapedtalks.com">Email us</a>.</p>
+    </div>
     <div id="past">
       <h2>Past events</h2>
       <p>
