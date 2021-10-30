@@ -1,211 +1,410 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132876190-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-132876190-1');
-    </script>
+<head>
+  <meta charset="UTF-8">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132876190-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <title>T-Shaped Talks - Brighton &amp; Hove</title>
-    <link rel="icon" type="image/x-icon" href="images/tshirt.png" />
+    gtag('config', 'UA-132876190-1');
+  </script>
 
-    <meta name="description" content="An evening event in Brighton where three experts share their wisdom of the arts, technology, and local knowledge."/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-Shaped Talks - Brighton &amp; Hove</title>
+  <link rel="icon" type="image/x-icon" href="images/tshirt.png" />
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300|Open+Sans:400,400i,700" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Open Sans', sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-      body > div {
-        max-width: 600px;
-        text-align: justify;
-        margin: 1em;
-      }
-      a {
-        color: inherit;
-      }
-      h1, h2, h3, h4 {
-        font-family: 'Lato', sans-serif;
-        font-weight: 300;
-        text-align: center;
-      }
-      h1 {
-        font-size: 96px;
-        font-weight: 100;
-        margin-bottom: 0;
-      }
-      h2 {
-        font-size: 32px;
-      }
-      img {
-        border: none;
-      }
-      #location {
-        font-family: 'Lato', sans-serif;
-        margin-top: 12px;
-        opacity: 0.5;
-        font-weight: 300;
-      }
-      #about {
-        margin-bottom: 2em;
-        font-style: italic;
-        text-align: center;
-      }
-      #next, #past {
-        text-align: center;
-      }
-      #next > p {
-        margin: 0.125em;
-      }
-      #next > a {
-        margin: 1em;
-      }
-      #past {
-        margin-top: 2em;
-        margin-bottom: 2em;
-      }
+  <meta name="description"
+    content="An evening event in Brighton where three experts share their wisdom of the arts, technology, and local knowledge." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300|Open+Sans:400,400i,700" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    body>div {
+      max-width: 600px;
+      text-align: justify;
+      margin: 1em;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 96px;
+      font-weight: 100;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    img {
+      border: none;
+    }
+
+    #location {
+      font-family: 'Lato', sans-serif;
+      margin-top: 12px;
+      opacity: 0.5;
+      font-weight: 300;
+    }
+
+    #about {
+      margin-bottom: 2em;
+      font-style: italic;
+      text-align: center;
+    }
+
+    #next,
+    #past {
+      text-align: center;
+    }
+
+    #next>p {
+      margin: 0.125em;
+    }
+
+    #next>a {
+      margin: 1em;
+    }
+
+    #past {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    #themes {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #themes li>* {
+      text-align: center;
+    }
+
+    @media only screen and (min-width: 600px) {
       #themes {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        margin-top: 32px;
+        margin-bottom: 32px;
       }
-      #themes li > * {
-        text-align: center;
+    }
+
+    #themes>* {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin: 0.5em;
+      width: 250px;
+      height: 280px;
+      background: url('images/tshirt.png') no-repeat center top;
+      background-size: 200px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.57em 1.5em;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 3px;
+      font-size: 0.8em;
+    }
+
+    .button.meetup {
+      background: #F64060;
+      font-weight: bold;
+    }
+
+    #credits {
+      font-size: 0.9em;
+      margin: 2em 1em;
+      opacity: 0.67;
+      text-align: center;
+    }
+
+    .rating {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: flex-start;
+      font-weight: bold;
+      color: #333;
+      margin: 4px;
+    }
+
+    .speakers {
+      list-style: none;
+    }
+
+    .speakers li {
+      display: grid;
+      grid-template-areas:
+        "avatar description"
+        "social -";
+      column-gap: 20px;
+      row-gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .speakers li:nth-child(even) {
+      grid-template-areas:
+        "description avatar"
+        "- social";
+    }
+
+    .speakers li>.avatar {
+      grid-area: avatar;
+      align-self: center;
+      justify-self: center;
+    }
+
+    .speakers li>.description {
+      grid-area: description;
+      text-align: left;
+      align-self: center;
+      margin: 0;
+    }
+
+    .speakers li:nth-child(even)>.description {
+      text-align: right;
+    }
+
+    .speakers li>.social {
+      grid-area: social;
+      color: darkgrey;
+    }
+
+    .speakers img {
+      border: none;
+      border-radius: 50%;
+      box-shadow: 0 0 4px lightgrey;
+    }
+
+    @media only screen and (max-width: 700px) {
+      h1 {
+        font-size: 48px;
       }
-      @media only screen and (min-width: 600px) {
-        #themes {
-          margin-top: 32px;
-          margin-bottom: 32px;
-        }
+
+      h2 {
+        font-size: 24px;
       }
-      #themes > * {
-        display: flex;
+
+      h3 {
+        font-size: 18px;
+      }
+
+      #themes {
         flex-direction: column;
-        justify-content: flex-end;
-        margin: 0.5em;
-        width: 250px;
-        height: 280px;
-        background: url('images/tshirt.png') no-repeat center top;
-        background-size: 200px;
       }
-      .button {
-        display: inline-block;
-        padding: 0.57em 1.5em;
-        background: #333;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 3px;
-        font-size: 0.8em;
-      }
-      .button.meetup {
-        background: #F64060;
+
+      #themes>* {
+        width: 100px;
+        height: 140px;
+        background-size: 90px;
         font-weight: bold;
       }
-      #credits {
-        font-size: 0.9em;
-        margin: 2em 1em;
-        opacity: 0.67;
-        text-align: center;
-      }
-      .rating {
-        display: inline-flex;
-        flex-direction: row;
-        align-items: flex-start;
-        font-weight: bold;
-        color: #333;
-        margin: 4px;
-      }
-      @media only screen and (max-width: 700px) {
-        h1 {
-          font-size: 48px;
-        }
-        h2 {
-          font-size: 24px;
-        }
-        h3 {
-          font-size: 18px;
-        }
-        #themes {
-          flex-direction: column;
-        }
-        #themes > * {
-          width: 100px;
-          height: 140px;
-          background-size: 90px;
-          font-weight: bold;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <h1>T-Shaped Talks</h1>
-    <h2 id="location">Brighton &amp; Hove</h2>
-    <p id="about">
-      An evening where local experts share their wisdom of the arts, technology, and local intiatives.
+    }
+  </style>
+</head>
+
+<body>
+  <h1>T-Shaped Talks</h1>
+  <h2 id="location">Brighton &amp; Hove</h2>
+  <p id="about">
+    An evening where local experts share their wisdom of the arts, technology, and local intiatives.
+  </p>
+  <ul id="themes">
+    <li>
+      <h3>Arts</h3>
+    </li>
+    <li>
+      <h3>Technology</h3>
+    </li>
+    <li>
+      <h3>Local</h3>
+    </li>
+  </ul>
+  <div id="next">
+    <p>Keep in touch and find out about the next event</p>
+    <a class="meetup button" href="https://www.meetup.com/t-shaped-talks/">Join us on Meetup</a>
+  </div>
+  <div id="what-to-expect">
+    <h2>What to expect</h2>
+    <p><b>Three in-depth talks</b> - Learn and be inspired in talks about local communities that are accessible to
+      everyone.</p>
+    <p><b>Conversations over questions</b> - There's plenty of time for you to talk to the speakers and other attendees.
+      Talks are not recorded.</p>
+    <p><b>A broad audience</b> - Meet and be inspired by others you might not usually meet.</p>
+    <p>T-Shaped Talks are inspired by the diverse communities of Brighton &amp; Hove. They are an opportunity to learn
+      from each other and find out what's going on in our city.</p>
+  </div>
+  <div id="what-is-t-shaped">
+    <h2>Why "T-Shaped"?</h2>
+    <p>
+      Learn what is to be a <a href="https://en.wikipedia.org/wiki/T-shaped_skills">T-shaped individual</a>? <a
+        href="https://medium.com/@jchyip/why-t-shaped-people-e8706198e437">This post</a> explains some of the reasons
+      why you may want to be T-shaped.</p>
     </p>
-    <ul id="themes">
-      <li><h3>Arts</h3></li>
-      <li><h3>Technology</h3></li>
-      <li><h3>Local</h3></li>
+  </div>
+  <div id="contact">
+    <h2>Get in touch</h2>
+    <p>Made a connection at T-Shaped Talks? Inspired to get involved in something new? Let us know at <a
+        href="mailto:tshapedtalks@chetbox.com">tshapedtalks@chetbox.com</a> or Tweet <a
+        href="https://twitter.com/TShapedTalks">@TShapedTalks</a></p>
+    <p>Interested in speaking or getting involved? <a href="mailto:tshapedtalks@chetbox.com">Email us</a>.</p>
+  </div>
+  <div id="past">
+    <h2>Past events</h2>
+    <p>
+    <h3><a href="https://www.meetup.com/t-shaped-talks/events/264693156/">October 2019 @ Platf9rm, Brighton</a></h3>
+    <span class="rating">4.8&nbsp;<img src="images/star.svg" alt="Star" /></span>
+    <ul class="speakers">
+      <li>
+        <img src="images/denise.jpg" alt="Denise Robins" width="80" height="80" />
+        <p class="description">
+          Denise Robins told us about <a href="https://www.brightonexplorers.org">Brighton
+            Explorers Club</a>, an outdoor activities club that's been going for over 50 years.</p>
+        <div class="social">
+          <a href="http://www.twitter.com/BrightonExplore" title="@BrightonExplore - Twitter"><i class="fa fa-twitter"
+              aria-hidden="true"></i></a>
+          <a href="http://www.instagram.com/brighton_explorers" title="@brighton_explorers - Instagram"><i
+              class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="http://www.facebook.com/BrightonExplore" title="BrightonExplore - Facebook"><i class="fa fa-facebook"
+              aria-hidden="true"></i></a>
+        </div>
+      </li>
+      <li>
+        <img src="images/anwen.jpg" alt="Anwen Williams" width="80" height="80" />
+        <p class="description">
+          Anwen Williams told us about <a href="https://codebar.io/brighton">Codebar
+            Brighton</a>, a free weekly one-on-one coding class for under-represented communities.</p>
+        <div class="social">
+          <a href="https://twitter.com/hello_anwen" title="@hello_anwen - Twitter"><i class="fa fa-twitter"
+              aria-hidden="true"></i></a>
+        </div>
+      </li>
+      <li>
+        <img src="images/tom-west.jpg" alt="Tom West" width="80" height="80" />
+        <p class="description">
+          Tom West told us about <a href="https://www.riptidewrestling.com/">Riptide
+            Wrestling</a> - yes, the fake WWE kind - that's big, loud, flamboyant, and keeps you guessing. </p>
+        <div class="social">
+          <a href="https://twitter.com/TomDarkoWest" title="@TomDarkoWest - Twitter"><i class="fa fa-twitter"
+              aria-hidden="true"></i></a>
+        </div>
+      </li>
     </ul>
-    <div id="next">
-      <p>Keep in touch and find out about the next event</p>
-      <a class="meetup button" href="https://www.meetup.com/t-shaped-talks/">Join us on Meetup</a>
-    </div>
-    <div id="what-to-expect">
-      <h2>What to expect</h2>
-      <p><b>Three in-depth talks</b> - Learn and be inspired in talks about local communities that are accessible to everyone.</p>
-      <p><b>Conversations over questions</b> - There's plenty of time for you to talk to the speakers and other attendees. Talks are not recorded.</p>
-      <p><b>A broad audience</b> - Meet and be inspired by others you might not usually meet.</p>
-      <p>T-Shaped Talks are inspired by the diverse communities of Brighton &amp; Hove. They are an opportunity to learn from each other and find out what's going on in our city.</p>
-    </div>
-    <div id="what-is-t-shaped">
-      <h2>Why "T-Shaped"?</h2>
-      <p>
-        Learn what is to be a <a href="https://en.wikipedia.org/wiki/T-shaped_skills">T-shaped individual</a>? <a href="https://medium.com/@jchyip/why-t-shaped-people-e8706198e437">This post</a> explains some of the reasons why you may want to be T-shaped.</p>
-      </p>
-    </div>
-    <div id="contact">
-      <h2>Get in touch</h2>
-      <p>Made a connection at T-Shaped Talks? Inspired to get involved in something new? Let us know at <a href="mailto:tshapedtalks@chetbox.com">tshapedtalks@chetbox.com</a> or Tweet <a href="https://twitter.com/TShapedTalks">@TShapedTalks</a></p>
-      <p>Interested in speaking or getting involved? <a href="mailto:tshapedtalks@chetbox.com">Email us</a>.</p>
-    </div>
-    <div id="past">
-      <h2>Past events</h2>
-      <p>
-        <a href="https://www.meetup.com/t-shaped-talks/events/264693156/">October 2019 @ Platf9rm, Brighton</a>
-        <br />
-        <span class="rating">4.8&nbsp;<img src="images/star.svg" alt="Star" /></span>
-      </p>
-      <p>
-        <a href="https://www.meetup.com/t-shaped-talks/events/259532514/">April 2019 @ Platf9rm, Brighton</a>
-        <br />
-        <span class="rating">4.8&nbsp;<img src="images/star.svg" alt="Star" /></span>
-      </p>
-      <p>
-        <a href="https://www.meetup.com/t-shaped-talks/events/258290365/">February 2019 @ Platf9rm, Brighton</a>
-        <br />
-        <span class="rating">4.9&nbsp;<img src="images/star.svg" alt="Star" /></span>
-      </p>
-    </div>
-    <div id="credits">
-      Put together with &#x2764; by <a href="https://chetbox.com">Chetan</a> and <a href="https://www.linkedin.com/in/lukethompsonhays">Luke</a>
-      <br>
-      with help from <a href="https://mattoakes.net/">Matt</a> and <a href="http://jamesburt.me.uk/">James</a>
-    </div>
-  </body>
+    </p>
+    <p>
+    <h3><a href="https://www.meetup.com/t-shaped-talks/events/259532514/">April 2019 @ Platf9rm, Brighton</a></h3>
+    <span class="rating">4.8&nbsp;<img src="images/star.svg" alt="Star" /></span>
+    <ul class="speakers">
+      <li>
+        <img src="images/sarah-ticho.jpg" alt="Sarah Ticho" width="80" height="80" />
+        <p class="description">Sarah Ticho told us about her journey from the arts to tech company, founding Hatsumi VR.
+          They curate experiences across arts, health and virtual reality.</p>
+        <div class="social">
+          <a href="https://twitter.com/sarahticho" title="@sarahticho - Twitter"><i class="fa fa-twitter"
+              aria-hidden="true"></i></a>
+        </div>
+      </li>
+      <li>
+        <img src="images/jason-smart.jpg" alt="Jason Smart" width="80" height="80" />
+        <p class="description">Jason Smart and Andy Cheng recounted the birth of The People's Republic of
+          Brighton & Hove, who have their own policies, flag, passport and TV show.</p>
+        <div class="social">
+          <a href="https://facebook.com/theprbh" title="The People's Republic of B&H - Facebook"><i
+              class="fa fa-facebook" aria-hidden="true"></i></a>
+        </div>
+      </li>
+      <li>
+        <img src="images/gill-steer.jpg" alt="Gillian Steer" width="80" height="80" />
+        <p class="description">Gillian Steer gave a <a href="http://mosaicworkshops.net/about/">mosaic workshop</a> and
+          told us about her artwork and the classes she
+          runs from her beautiful home.</p>
+        <div class="social">
+          <a href="https://www.instagram.com/gilliansteer" title="@gilliansteer - Instagram"><i class="fa fa-instagram"
+              aria-hidden="true"></i></a>
+        </div>
+      </li>
+    </ul>
+    </p>
+    <p>
+    <h3><a href="https://www.meetup.com/t-shaped-talks/events/258290365/">February 2019 @ Platf9rm, Brighton</a></h3>
+    <span class="rating">4.9&nbsp;<img src="images/star.svg" alt="Star" /></span>
+    <ul class="speakers">
+      <li>
+        <img src="images/lomokev.jpg" alt="Kevin Meredith" width="80" height="80" />
+        <p class="description">
+          Kevin Meredith (a.k.a Lomokev) told us about his iconic photos of Brighton beach front and the
+          country's oldest swimming club.
+        </p>
+        <div class="social">
+          <a href="https://twitter.com/lomokev" title="@lomokev - Twitter"><i class="fa fa-twitter"
+              aria-hidden="true"></i></a>
+          <a href="https://twitter.com/lomokev" title="@lomokev - Instagram"><i class="fa fa-instagram"
+              aria-hidden="true"></i></a>
+        </div>
+      </li>
+      <li>
+        <img src="images/brighton-food-tours.jpg" alt="Cat &amp; Angela" width="80" height="80" />
+        <p class="description">
+          Cat &amp; Angela from <a href="https://www.brightonfoodtours.com/">Brighton Food
+            Tours</a> told us all
+          about the food and drink scene in town and what to watch out for.
+        </p>
+        <div class="social">
+          <a href="https://twitter.com/btnfoodtours" title="@btnfoodtours - Twitter"><i class="fa fa-twitter"
+              aria-hidden="true"></i></a>
+          <a href="https://twitter.com/btnfoodtours" title="@btnfoodtours - Instagram"><i class="fa fa-instagram"
+              aria-hidden="true"></i></a>
+        </div>
+      </li>
+      <li>
+        <img src="images/remy.jpg" alt="Remy Sharp" width="80" height="80" />
+        <p class="description">
+          Remy Sharp told us about <a href="https://ffconf.org/">FFConf</a>, an inclusive tech conference
+          all about Javascript, held in the Duke of
+          York's Picture House.
+        </p>
+        <div class="social">
+          <a href="https://twitter.com/rem" title="@rem - Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+      </li>
+    </ul>
+    </p>
+  </div>
+  <div id="credits">
+    Put together with &#x2764; by <a href="https://chetbox.com">Chetan</a> and <a
+      href="https://www.linkedin.com/in/lukethompsonhays">Luke</a>
+    <br>
+    with help from <a href="https://mattoakes.net/">Matt</a> and <a href="http://jamesburt.me.uk/">James</a>
+  </div>
+</body>
+
 </html>
