@@ -33,7 +33,7 @@
 
     body>div {
       max-width: 600px;
-      text-align: justify;
+      text-align: left;
       margin: 1em;
     }
 
@@ -78,7 +78,8 @@
     }
 
     #next,
-    #past {
+    #past,
+    #tip {
       text-align: center;
     }
 
@@ -132,13 +133,22 @@
       background: #333;
       color: #fff;
       text-decoration: none;
-      border-radius: 3px;
+      border-radius: 5px;
       font-size: 0.8em;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      line-height: 1.5em;
+      display: inline-flex;
+      align-items: center;
     }
 
     .button.meetup {
-      background: #F64060;
-      font-weight: bold;
+      background: #ff5f5f;
+    }
+
+    .button.tip {
+      background: #00b9fe;
     }
 
     #credits {
@@ -205,6 +215,39 @@
       box-shadow: 0 0 4px lightgrey;
     }
 
+    #tip>p {
+      text-align: left;
+    }
+
+    #kofiframe-container,
+    #kofiframe {
+      height: 650px;
+    }
+
+    #kofiframe-container {
+      display: inline-block;
+      overflow-y: hidden;
+      opacity: 1;
+      transition: height 0.4s, opacity 0.4s 0.2s;
+      width: 400px;
+    }
+
+    #kofiframe-container.hidden {
+      height: 0;
+      opacity: 0;
+    }
+
+    #kofiframe {
+      height: 640px;
+      border: none;
+      width: 100%;
+      padding: 4px;
+      box-sizing: border-box;
+      background: #f9f9f9;
+      border-radius: 10px;
+      margin-top: 1em;
+    }
+
     @media only screen and (max-width: 700px) {
       h1 {
         font-size: 48px;
@@ -249,6 +292,27 @@
       <h3>Local</h3>
     </li>
   </ul>
+  <div id="tip">
+    <p>
+      I haven't been comfortable organising a T-Shaped Talks in 2020-2021 but I'd love to bring this
+      event back. I've got so many wonderful people in mind! If you'd like to see a T-Shaped Talks in early 2022 please
+      leave a tip to help it happen.
+    </p>
+    <p>
+      T-Shaped Talks no longer has a sponsor so all tips will go towards hosting the next events.
+    </p>
+    <p>
+      See you IRL soon, <a href="https://chetbox.com">Chetan</a>.
+    </p>
+    <button class="tip button" onclick="document.getElementById('kofiframe-container').classList.toggle('hidden')"><img
+        src="images/ko-fi.png" alt="ko-fi" width="23" height="16" style="margin-right:1ch;" />Support T-Shaped Talks
+      with
+      £2</button>
+    <div id="kofiframe-container" class="hidden">
+      <iframe id="kofiframe" src="https://ko-fi.com/tshapedtalks/?hidefeed=true&widget=true&embed=true&preview=true"
+        title="tshapedtalks - ko-fi"></iframe>
+    </div>
+  </div>
   <div id="next">
     <p>Keep in touch and find out about the next event</p>
     <a class="meetup button" href="https://www.meetup.com/t-shaped-talks/">Join us on Meetup</a>
@@ -400,8 +464,7 @@
     </p>
   </div>
   <div id="credits">
-    Put together with &#x2764; by <a href="https://chetbox.com">Chetan</a> and <a
-      href="https://www.linkedin.com/in/lukethompsonhays">Luke</a>
+    Put together with &#x2764; by <a href="https://chetbox.com">Chetan</a>
     <br>
     with help from <a href="https://mattoakes.net/">Matt</a> and <a href="http://jamesburt.me.uk/">James</a>
   </div>
